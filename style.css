@@ -413,6 +413,23 @@ footer{
   height: auto;
 }
 
+/* Stack captions and images before the fixed caption width crowds out the image. */
+@media(max-width:900px) {
+  .side-caption {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .side-caption .prompt-box {
+    width: auto;
+  }
+
+  .side-caption > br {
+    display: none;
+  }
+}
+
 /* Three-part Concept section */
 .concept-part {
   max-width: 900px;
